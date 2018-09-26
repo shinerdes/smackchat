@@ -125,6 +125,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="DOb-Xw-4e5" id="xcK-z9-bdh"/>
+                        <outlet property="userImg" destination="eSe-5C-GCp" id="Z4q-N6-FVh"/>
                         <segue destination="Ffd-vN-z50" kind="show" identifier="toLogin" id="lN4-RN-FpR"/>
                     </connections>
                 </viewController>
@@ -399,14 +400,14 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="STV-NB-S2a">
-                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <rect key="frame" x="169" y="235" width="37" height="37"/>
                                 <color key="color" red="0.32549019610000002" green="0.41960784309999999" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4d0-4W-RxR" firstAttribute="centerX" secondItem="5no-QA-DYS" secondAttribute="centerX" id="2Im-mf-5Eu"/>
-                            <constraint firstItem="STV-NB-S2a" firstAttribute="centerY" secondItem="5no-QA-DYS" secondAttribute="centerY" constant="-100" id="54r-Ar-7Dn"/>
+                            <constraint firstItem="STV-NB-S2a" firstAttribute="centerY" secondItem="5no-QA-DYS" secondAttribute="centerY" constant="-80" id="54r-Ar-7Dn"/>
                             <constraint firstItem="c7c-Ro-g4P" firstAttribute="centerX" secondItem="5no-QA-DYS" secondAttribute="centerX" id="78c-o7-1QC"/>
                             <constraint firstItem="M2q-eV-y5v" firstAttribute="centerX" secondItem="5no-QA-DYS" secondAttribute="centerX" id="7ta-RK-i3f"/>
                             <constraint firstItem="1jb-7K-L9f" firstAttribute="top" secondItem="5CS-db-3SD" secondAttribute="bottom" constant="8" id="HSd-YX-Bda"/>
