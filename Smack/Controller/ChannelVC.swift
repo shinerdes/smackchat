@@ -13,14 +13,16 @@ class ChannelVC: UIViewController {
     @IBOutlet weak var userImg: CircleImage!
     @IBOutlet weak var loginBtn: UIButton!
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
-    
-    
-    
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
          self.revealViewController().rearViewRevealWidth = self.view.frame.width - 60
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setupUserInfo()
     }
     
     
@@ -30,18 +32,19 @@ class ChannelVC: UIViewController {
             let profile = ProfileVC()
             profile.modalPresentationStyle = .custom
             present(profile, animated: true, completion: nil)
-            
-            
+        
         } else {
-            
             performSegue(withIdentifier: TO_LOGIN, sender: nil)
         }
-          
-       
-       
     }
+
     
     @objc func userDataDidChange(_ notif: Notification) {
+        setupUserInfo()
+    }
+
+    
+    func setupUserInfo() {
         if AuthService.instance.isLoggedIn {
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
             userImg.image = UIImage(named: UserDataService.instance.avatarName)
@@ -52,5 +55,4 @@ class ChannelVC: UIViewController {
             userImg.backgroundColor = UIColor.clear
         }
     }
-
 }
