@@ -16,6 +16,8 @@
 		1921D486215BAA3B00D82859 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1921D485215BAA3B00D82859 /* MessageService.swift */; };
 		1921D488215BAAA400D82859 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1921D487215BAAA400D82859 /* Channel.swift */; };
 		1921D48A215CB3D000D82859 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1921D489215CB3D000D82859 /* ChannelCell.swift */; };
+		1921D48D215CF15E00D82859 /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1921D48B215CF15E00D82859 /* AddChannelVC.swift */; };
+		1921D48E215CF15E00D82859 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1921D48C215CF15E00D82859 /* AddChannelVC.xib */; };
 		19F5E6AD21556B4100C24FB7 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F5E6AC21556B4100C24FB7 /* RoundedButton.swift */; };
 		19F5E6AF215644DA00C24FB7 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F5E6AE215644DA00C24FB7 /* UserDataService.swift */; };
 		506A4BC7C5309D81E3CEC447 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D0E21C30B85232D2F650A5 /* Pods_Smack.framework */; };
@@ -43,6 +45,8 @@
 		1921D485215BAA3B00D82859 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		1921D487215BAAA400D82859 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Channel.swift; path = Smack/Services/Channel.swift; sourceTree = SOURCE_ROOT; };
 		1921D489215CB3D000D82859 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
+		1921D48B215CF15E00D82859 /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
+		1921D48C215CF15E00D82859 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		19F5E6AC21556B4100C24FB7 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		19F5E6AE215644DA00C24FB7 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		34D0E21C30B85232D2F650A5 /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				1921D481215B764700D82859 /* ProfileVC.xib */,
+				1921D48C215CF15E00D82859 /* AddChannelVC.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 				73D4C45E2142DC7300381960 /* CreateAccountVC.swift */,
 				1921D4782156778100D82859 /* AvatarPickerVC.swift */,
 				1921D480215B764700D82859 /* ProfileVC.swift */,
+				1921D48B215CF15E00D82859 /* AddChannelVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1921D48E215CF15E00D82859 /* AddChannelVC.xib in Resources */,
 				1921D483215B764700D82859 /* ProfileVC.xib in Resources */,
 				735A4875213FFA450009B401 /* LaunchScreen.storyboard in Resources */,
 				735A4872213FFA450009B401 /* Assets.xcassets in Resources */,
@@ -332,6 +339,7 @@
 				73D4C45F2142DC7300381960 /* CreateAccountVC.swift in Sources */,
 				190543C721553D3A00C18D7A /* AuthService.swift in Sources */,
 				73D4C45D2142D8EF00381960 /* LoginVC.swift in Sources */,
+				1921D48D215CF15E00D82859 /* AddChannelVC.swift in Sources */,
 				730C00EB214137EC00747053 /* GradientView.swift in Sources */,
 				1921D47B21592E5500D82859 /* AvatarCell.swift in Sources */,
 				735A486B213FFA420009B401 /* AppDelegate.swift in Sources */,
