@@ -10,6 +10,7 @@ import UIKit
 
 class ChatVC: UIViewController {
 
+    @IBOutlet weak var messageTxtBox: UITextField!
     
     // outlet
     @IBOutlet weak var channelNameLbl: UILabel!
@@ -18,6 +19,10 @@ class ChatVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.bindToKeyboard()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
+        view.addGestureRecognizer(tap)
+        
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
@@ -46,10 +51,31 @@ class ChatVC: UIViewController {
         updateWithChannel()
     }
     
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
+    
     func updateWithChannel() {
         let channelName = MessageService.instance.selectedChannel?.channelTitle ?? ""
         channelNameLbl.text = "#\(channelName)"
         getMessages()
+    }
+    
+    
+    @IBAction func sendMsgPressed(_ sender: Any) {
+        if AuthService.instance.isLoggedIn {
+            guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+            guard let message = messageTxtBox.text else { return }
+            
+            SocketService.instance.addMessage(messageBody: message, userId: UserDataService.instance.id, channelId: channelId) { (success) in
+                if success {
+                    self.messageTxtBox.text = ""
+                    self.messageTxtBox.resignFirstResponder()
+                    
+                }
+            }
+            
+        }
     }
     
     func onLoginGetMessages() {
@@ -68,7 +94,7 @@ class ChatVC: UIViewController {
     func getMessages() {
         guard let channelId = MessageService.instance.selectedChannel?.id else { return }
         MessageService.instance.findAllMessageForChannel(channelId: channelId) { (success) in
-            <#code#>
+            
         }
     }
 }
