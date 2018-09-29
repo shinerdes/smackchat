@@ -10,6 +10,7 @@ import UIKit
 
 class ChannelCell: UITableViewCell {
 
+    
     @IBOutlet weak var channelName: UILabel!
     
     
@@ -35,7 +36,7 @@ class ChannelCell: UITableViewCell {
 
     
     func configureCell(channel : Channel) {
-        let title = channel.id.count
+        let title = channel.channelTitle ?? ""
         channelName.text = "#\(title)"
 
 

@@ -25,6 +25,7 @@ class AddChannelVC: UIViewController {
     @IBAction func closeModelPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func createChannelPressed(_ sender: Any) {
         guard let channelName = nameTxt.text , nameTxt.text != "" else { return }
         guard let channelDesc = chanDesc.text else { return }

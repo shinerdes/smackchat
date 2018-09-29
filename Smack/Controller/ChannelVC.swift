@@ -10,6 +10,7 @@ import UIKit
 
 class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+ 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userImg: CircleImage!
     @IBOutlet weak var loginBtn: UIButton!
@@ -18,11 +19,13 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         tableView.delegate = self
-        tableView.delegate = self
-         self.revealViewController().rearViewRevealWidth = self.view.frame.width - 60
-        NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+        tableView.dataSource = self
         
+        self.revealViewController().rearViewRevealWidth = self.view.frame.width - 60
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.channelsLoaded(_:)), name: NOTIF_CHANNELS_LOADED, object: nil)
         
         SocketService.instance.getChannel { (success) in
@@ -34,7 +37,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidAppear(_ animated: Bool) {
         setupUserInfo()
-        setupChannelInfo()
+      
     }
     
     @IBAction func addChannelPressed(_ sender: Any) {
@@ -83,25 +86,25 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func setupChannelInfo() {
-        
-        if AuthService.instance.isLoggedIn {
-            
-            MessageService.instance.findAllChannel { (succes) in
-                
-                self.tableView.reloadData()
-                
-            }
-            
-        } else {
-            
-            MessageService.instance.channels = [Channel]()
-            
-            tableView.reloadData()
-            
-        }
-        
-    }
+//    func setupChannelInfo() {
+//        
+//        if AuthService.instance.isLoggedIn {
+//            
+//            MessageService.instance.findAllChannel { (succes) in
+//                
+//                self.tableView.reloadData()
+//                
+//            }
+//            
+//        } else {
+//            
+//            MessageService.instance.channels = [Channel]()
+//            
+//            tableView.reloadData()
+//            
+//        }
+//        
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath) as? ChannelCell {

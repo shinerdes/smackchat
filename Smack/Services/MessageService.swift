@@ -34,6 +34,9 @@ class MessageService {
                     
                     NotificationCenter.default.post(name: NOTIF_CHANNELS_LOADED, object: nil)
                     print(self.channels[0].channelTitle!)
+                    print(self.channels[1].channelTitle!)
+                  
+
                     completion(true)
                 }
                 

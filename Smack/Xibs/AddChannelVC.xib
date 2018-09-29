@@ -91,7 +91,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="createChannelPress:" destination="-1" eventType="touchUpInside" id="ouu-Bx-wKg"/>
+                                <action selector="createChannelPressed:" destination="-1" eventType="touchUpInside" id="MmP-ic-NkV"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYp-0O-y83">
