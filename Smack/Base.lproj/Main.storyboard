@@ -600,6 +600,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="channelNameLbl" destination="Uwe-xY-zqh" id="6Ka-dj-fgs"/>
                         <outlet property="menuBtn" destination="lp2-lI-ks0" id="o6p-Nj-kdj"/>
                     </connections>
                 </viewController>
