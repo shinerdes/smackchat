@@ -18,6 +18,7 @@
 		1921D48A215CB3D000D82859 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1921D489215CB3D000D82859 /* ChannelCell.swift */; };
 		1921D48D215CF15E00D82859 /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1921D48B215CF15E00D82859 /* AddChannelVC.swift */; };
 		1921D48E215CF15E00D82859 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1921D48C215CF15E00D82859 /* AddChannelVC.xib */; };
+		1921D490215F50C900D82859 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1921D48F215F50C900D82859 /* SocketService.swift */; };
 		19F5E6AD21556B4100C24FB7 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F5E6AC21556B4100C24FB7 /* RoundedButton.swift */; };
 		19F5E6AF215644DA00C24FB7 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F5E6AE215644DA00C24FB7 /* UserDataService.swift */; };
 		506A4BC7C5309D81E3CEC447 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D0E21C30B85232D2F650A5 /* Pods_Smack.framework */; };
@@ -47,6 +48,7 @@
 		1921D489215CB3D000D82859 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		1921D48B215CF15E00D82859 /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
 		1921D48C215CF15E00D82859 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
+		1921D48F215F50C900D82859 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		19F5E6AC21556B4100C24FB7 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		19F5E6AE215644DA00C24FB7 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		34D0E21C30B85232D2F650A5 /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,7 @@
 				190543C621553D3A00C18D7A /* AuthService.swift */,
 				19F5E6AE215644DA00C24FB7 /* UserDataService.swift */,
 				1921D485215BAA3B00D82859 /* MessageService.swift */,
+				1921D48F215F50C900D82859 /* SocketService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1921D490215F50C900D82859 /* SocketService.swift in Sources */,
 				1921D482215B764700D82859 /* ProfileVC.swift in Sources */,
 				1921D48A215CB3D000D82859 /* ChannelCell.swift in Sources */,
 				730C00E9214121F200747053 /* ChannelVC.swift in Sources */,

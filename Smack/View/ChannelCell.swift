@@ -17,6 +17,8 @@ class ChannelCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -30,10 +32,12 @@ class ChannelCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+
+    
     func configureCell(channel : Channel) {
-        let title = channel.channelTitle ?? ""
+        let title = channel.id.count
         channelName.text = "#\(title)"
-     
+
 
     }
 
