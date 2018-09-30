@@ -72,7 +72,8 @@ class MessageService {
                         
                 
                     }
-                    
+                    //print(self.messages)
+                    completion(true)
                 }
             } else {
                 debugPrint(response.result.error as Any)
@@ -110,31 +111,3 @@ class MessageService {
 
 
 
-
-/*
- func findAllChannels(completion: @escaping CompletionHandler) {
- Alamofire.request(URL_GET_CHANNELS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON
- { (response) in
- if response.result.isSuccess {
- let channel1 = Channel(title: "General", channelDescription: "Talk about anything!", id: "1")
- let channel2 = Channel(title: "Sports", channelDescription: "Anything sports related in here!", id: "2")
- self.channels.append(channel1)
- self.channels.append(channel2)
- 
- //                    guard let data = response.data else { return }
- //                    let json = try! JSON(data: data).array //Returns array of objects!
- //                    for item in json! {
- //                        let name =  item["name"].stringValue
- //                        let description = item["description"].stringValue
- //                        let id = item["_id"].stringValue
- //                        let channel = Channel(title: name, channelDescription: description, id: id)
- //                        self.channels.append(channel)
- //                    }
- completion(true)
- } else {
- completion(false)
- debugPrint(response.result.error as Any)
- }
- }
- 
- */
